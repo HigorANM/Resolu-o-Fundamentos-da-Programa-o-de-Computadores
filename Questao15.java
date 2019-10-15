@@ -1,18 +1,33 @@
-package questões.pkgdo.livro.fundamentos.da.programação.de.computadores;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package questões.pkgdo.livro.fundamentos.da.programação.de.computador.cap;
 
 import javax.swing.JOptionPane;
 
 public class Questao15 {
+
     public static void main(String[] args) {
-        double s, c1, c2, sr;
-        
-        s = Double.parseDouble(JOptionPane.showInputDialog(null, "Qual o sálario de João? "));
-        c1 = Double.parseDouble(JOptionPane.showInputDialog(null, "Qual o valor da 1ª conta de João? "));
-        c2 = Double.parseDouble(JOptionPane.showInputDialog(null, "Qual o valor da 2ª conta de João? "));
-        c1= c1+(c1*2/100);
-        c2= c2+(c2*2/100);
-        sr= s-(c1+c2);
-        JOptionPane.showMessageDialog(null, "O restante do sálario de joão é de: "+sr);
+        double sal = 0, fim;
+        int tipo;
+        tipo = Integer.parseInt(JOptionPane.showInputDialog("Informe o tipo de conta \n 1 = poupança \n 2=fundos de renda fixa"));
+        switch (tipo) {
+            case 1:
+                sal = Double.parseDouble(JOptionPane.showInputDialog("Informe o valor: "));
+                fim = sal + (sal * 0.03);
+                JOptionPane.showMessageDialog(null, "No fim de 1 mês, resultará: R$" + fim);
+                break;
+            case 2:
+                JOptionPane.showMessageDialog(null, "Informe o valor");
+                fim = sal + (sal * 0.03);
+                JOptionPane.showMessageDialog(null, "No fim de 1 mês, resultará: R$" + fim);
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Informe um valor válido");
+                break;
+        }
+
     }
-    
 }

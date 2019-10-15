@@ -1,17 +1,35 @@
-package questões.pkgdo.livro.fundamentos.da.programação.de.computadores;
+package questões.pkgdo.livro.fundamentos.da.programação.de.computador.cap;
 
-import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
 public class Questao20 {
+
     public static void main(String[] args) {
-                double a,d,e;
-        DecimalFormat df = new DecimalFormat("#,##");
-        a = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o angulo formado "
-                + "pela escada: "));
-        d = Double.parseDouble(JOptionPane.showInputDialog(null,"Informe a distancia da escada "
-                + "para a parede: "));
-        e = d * Math.cos(Math.toRadians(a));
-        JOptionPane.showMessageDialog(null, "O comprimento da escada é de "+df.format(e)+"m");
+        int i;
+        String r;
+        i = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual a sua idade? "));
+        if (i > 30) {
+            r = "Sênior";
+        } else {
+            if (i >= 16) {
+                r = "é um Nadador Adulto";
+            } else {
+                if (i >= 11) {
+                    r = "é um Nadador Adolescente";
+                } else {
+                    if (i >= 8) {
+                        r = "é um Nadador Juvenil";
+                    } else {
+                        if (i >= 5) {
+                            r = "é um Nadador Infantil";
+                        } else {
+                            r = "não é um nadador";
+                        }
+
+                    }
+                }
+            }
+        }
+        JOptionPane.showMessageDialog(null, "Você "+r);
     }
 }

@@ -1,21 +1,33 @@
-package questões.pkgdo.livro.fundamentos.da.programação.de.computadores;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package questões.pkgdo.livro.fundamentos.da.programação.de.computador.cap;
 
 import javax.swing.JOptionPane;
 
-
-public class Questao25 {
-    public static void main(String[] args) {
-            int h,m,hm,tm,ms;
-        h = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe a hora: "));
-        m = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe os minutos: "));
-        hm = h * 60;
-        tm = hm + m;
-        ms = tm * 60;
-        JOptionPane.showMessageDialog(null, h+" horas convertida para minutos vale "+hm+" "
-                + "minutos");
-        JOptionPane.showMessageDialog(null, "O total de minutos é "+tm+" minutos");
-        JOptionPane.showMessageDialog(null, "O total dos minutos convertidos em segundos vale "
-                +ms+" segundos");
+public class Questao25
+{
+    public static void main(final String[] args) {
+        final double hrex = Double.parseDouble(JOptionPane.showInputDialog("informe o numero"));
+        final double hrfalt = Double.parseDouble(JOptionPane.showInputDialog("informe o numero"));
+        final double resul = hrex - 2.0 * hrfalt / 3.0;
+        final double min = resul * 60.0;
+        if (min >= 2400.0) {
+            JOptionPane.showMessageDialog(null, "bonus de 500 reais");
+        }
+        else if (min >= 1800.0) {
+            JOptionPane.showMessageDialog(null, "bonus de 400 reais");
+        }
+        else if (min >= 1200.0) {
+            JOptionPane.showMessageDialog(null, "bonus de 300 reais");
+        }
+        else if (min >= 600.0) {
+            JOptionPane.showMessageDialog(null, "bonus de 200 reais");
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "bonus de 100 reais");
+        }
     }
-    
 }

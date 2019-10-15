@@ -1,16 +1,30 @@
-package questões.pkgdo.livro.fundamentos.da.programação.de.computadores;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package questões.pkgdo.livro.fundamentos.da.programação.de.computador.cap;
 
 import javax.swing.JOptionPane;
 
 public class Questao09 {
+
     public static void main(String[] args) {
-        int bma, bme, area, altura;
-        bma = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual o valor da base maior? "));
-        bme = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual o valor da base menor? "));
-        altura = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual o valor da altura? "));
-        area=((bma+bme)*altura)/2;
-        JOptionPane.showMessageDialog(null, "A area do trapézio é:"+area);
-        
+        double saldoM, credito;
+        saldoM = Double.parseDouble(JOptionPane.showInputDialog("Informe o saldo médio"));
+        if (saldoM < 200) {
+            credito = saldoM * 0.1;
+        } else if (saldoM < 300) {
+            credito = saldoM * 0.2;
+        } else {
+            if (saldoM <= 400) {
+                credito = saldoM * 0.25;
+            } else {
+                credito = saldoM * 0.3;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "seu saldo médio é: " + saldoM + ". O seu créito é: " + credito);
+
     }
-    
+
 }

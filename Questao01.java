@@ -1,21 +1,21 @@
-package questões.pkgdo.livro.fundamentos.da.programação.de.computadores;
-import javax.swing.JOptionPane;
-public class Questao01 {
-    public static void main(String[] args) {
+package questões.pkgdo.livro.fundamentos.da.programação.de.computador.cap;
 
-        //Variaveis
-        int num1, num2, sub;
-        
-        //Entrada de Dados
-        num1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um número: "));
-        num2 = Integer.parseInt(JOptionPane.showInputDialog("Digite outro número: "));
-        
-        //Entrada de Dados
-        sub= num1-num2;
-        
-        //Saída de Dados
-        JOptionPane.showMessageDialog(null, "A subtração do primeiro pelo segundo é : "+sub);
-        
+import javax.swing.JOptionPane;
+
+public class Questao01 {
+
+    public static void main(String[] args) {
+        double n1, n2, n3, n4, m;
+        n1 = Double.parseDouble(JOptionPane.showInputDialog(null, "Qual a 1ª nota? "));
+        n2 = Double.parseDouble(JOptionPane.showInputDialog(null, "Qual a 2ª nota? "));
+        n3 = Double.parseDouble(JOptionPane.showInputDialog(null, "Qual a 3ª nota? "));
+        n4 = Double.parseDouble(JOptionPane.showInputDialog(null, "Qual a 4ª nota? "));
+        m = (n1 + n2 + n3 + n4) / 4;
+        if (m >= 7) {
+            JOptionPane.showMessageDialog(null, "Você foi aprovado");
+        } else {
+            JOptionPane.showMessageDialog(null, "Você foi reprovado");
+        }
     }
-    
+
 }

@@ -1,17 +1,22 @@
-package questões.pkgdo.livro.fundamentos.da.programação.de.computadores;
+package questões.pkgdo.livro.fundamentos.da.programação.de.computador.cap;
 
 import javax.swing.JOptionPane;
 
-
 public class Questao19 {
-    public static void main(String[] args) {
-                double c,l,a,p;
-        c = Double.parseDouble(JOptionPane.showInputDialog(null, "Comprimento do comodo (em metros): "));
-        l = Double.parseDouble(JOptionPane.showInputDialog(null,"Largura do comodo (em metros):"));
-        a = c * l;
-        p = a * 18;
-        JOptionPane.showMessageDialog(null, "A area vale "+a+" e é necessário a potência de "+p+
-                "W para iluminar por completo por comodo.");
+
+    public static void main(String[] args){
+    String s;
+    double pi, a ;
+  s = JOptionPane.showInputDialog("Qual o seu gênero: (M ou F)");
+  a = Double.parseDouble(JOptionPane.showInputDialog("Qual a sua altura? "));
+        if (s=="M") {
+            pi = (72.7*a)-58;
+            
+        }else{
+            pi = (62.1*a)-44.7;
+        }
+        JOptionPane.showMessageDialog(null, "Seu peso ideal é: "+pi);
+                
     }
-    
+
 }
