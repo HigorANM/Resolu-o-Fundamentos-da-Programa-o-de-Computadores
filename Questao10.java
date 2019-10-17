@@ -1,25 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package questões.pkgdo.livro.fundamentos.da.programação.de.computador.cap;
+package cap05;
 
 import javax.swing.JOptionPane;
 
-public class Questao10 {
+public class questao10 {
 
     public static void main(String[] args) {
-        double preco, custoF;
-        custoF = Double.parseDouble(JOptionPane.showInputDialog("Informe o preço de fábrica"));
+        int impar = 0, par = 0, numero;
+        int c = 0;
+        while (c != 10) {
+            numero = Integer.parseInt(JOptionPane.showInputDialog("Informe um numero: "));
 
-        if (12000 >= custoF) {
-            preco = custoF + (custoF * 0.05);
-        } else if (custoF <= 25000) {
-            preco = custoF + (custoF * 0.1) + (custoF * 0.15);
-        } else {
-            preco = custoF + (custoF * 0.15) + (custoF * 0.2);
+            if ((numero % 2) == 0) {
+                par += numero;
+            } else {
+                impar += numero;
+            }
+
+            c++;
+
         }
-        JOptionPane.showMessageDialog(null, "O preço do carro é:" + preco);
+        JOptionPane.showMessageDialog(null, "a soma dos números pares é: "+par);
+        JOptionPane.showMessageDialog(null, "a soma dos números impares é: "+impar);
     }
 }

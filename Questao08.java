@@ -1,30 +1,44 @@
-package questões.pkgdo.livro.fundamentos.da.programação.de.computador.cap;
+package cap05;
 
 import javax.swing.JOptionPane;
 
-public class Questao08 {
+public class questao08 {
+
     public static void main(String[] args) {
-       int num, num1, num2, result;
-       double numr, raiz;
-        
-        JOptionPane.showMessageDialog(null, "Menu: \n 1-Somar dois números \n 2-Raiz "
-                + "quadrada de um número");
-        num = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual "
-                + "opção você deseja seguir? "));
-        if (num==1) {
-           num1 = Integer.parseInt( JOptionPane.showInputDialog("Qual o 1º número? "));
-           num2 = Integer.parseInt( JOptionPane.showInputDialog("Qual o 2º número? "));
-           result = num1+num2;
-           JOptionPane.showMessageDialog(null, "A soma dos dois números é: "+result);
-        }else{if (num==2) {
-                numr = Double.parseDouble(JOptionPane.showInputDialog("Qual o número que você deseja fazer a raiz? "));
-                raiz = Math.sqrt(numr);
-                JOptionPane.showMessageDialog(null, "A raiz do número é: "+raiz);
-            }else{
-            JOptionPane.showMessageDialog(null, "A opção escolhida não está no Menu");
+        /* olhos : A - azul ; p - preto ; V verde ; C - castanho;
+        Cabelos : C - castanho ; P - preto ; R - ruivo ; L - loiro;
+         */
+        double idade, peso, altura, somida = 0, media;
+        String olhos, cabelos;
+        double ida = 0, alt = 0, cor = 0, olhoA = 0;
+        int c = 0;
+        while (c != 6) {
+            idade = Double.parseDouble(JOptionPane.showInputDialog("Informe sua idade: "));
+            peso = Double.parseDouble(JOptionPane.showInputDialog("Informe seu peso: "));
+            altura = Double.parseDouble(JOptionPane.showInputDialog("Informe sua altura: "));
+            olhos = JOptionPane.showInputDialog("Informe a cor de seus olhos\n Olhos :\n A - azul\n P - preto\n V - verde\n C = castanho ");
+            cabelos = JOptionPane.showInputDialog("Informe a cor de seus cabelos\n Cabelos :\n R - ruivo\n P - preto\n L - loiro\n C = castanho ");
+            if (idade > 50 && peso < 60) {
+                ida++;
+            }
+
+            if (altura == 1.50) {
+                alt++;
+                somida += idade;
+            }
+
+            if (cabelos.equals("R") && !olhos.equals("A")) {
+                cor++;
+            }
+            if (olhos.equals("A")) {
+                olhoA++;
+            }
+            c++;
         }
-        }
-        
+        media = somida / alt;
+        JOptionPane.showMessageDialog(null, "A porcentagem de pessoas com olhos azul é: "+(olhoA*100/6)+" %");
+        JOptionPane.showMessageDialog(null, "A quantidades de pessoas com peso inferior a 60 e idade maior que 50 são: "+ida);
+        JOptionPane.showMessageDialog(null, "a media das pessoas com altura inferior a 1.50 é: "+media);
+        JOptionPane.showMessageDialog(null, "a quantidade de pessoas com cabelos ruivos e olhos não azul é: "+cor);
     }
-   
 }

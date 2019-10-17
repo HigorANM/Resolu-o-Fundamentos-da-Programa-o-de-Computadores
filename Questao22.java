@@ -1,49 +1,23 @@
-package questões.pkgdo.livro.fundamentos.da.programação.de.computador.cap;
+package capitulo05;
 
 import javax.swing.JOptionPane;
 
-public class Questao22 {
+public class quest22 {
 
     public static void main(String[] args) {
-        int i, p, g = 0;
-        i = Integer.parseInt(JOptionPane.showInputDialog("Qual a sua idade? "));
-        p = Integer.parseInt(JOptionPane.showInputDialog("Qual o seu peso? "));
-        if (i < 20) {
-            if (p <= 60) {
-                g = 9;
-            } else {
-                if (p > 60 && p <= 90) {
-                    g = 8;
-                } else {
-                    g = 7;
-                }
-            }
-        } else {
-            if (i >= 20 && i <= 50) {
-                if (p <= 60) {
-                    g = 6;
-                } else {
-                    if (p > 60 && p <= 90) {
-                        g = 5;
-                    } else {
-                        g = 4;
-                    }
-                }
-            }
-        }
-        if (i > 50) {
-            if (p <= 60) {
-                g = 3;
-            } else {
-                if (p > 60 && p <= 90) {
-                    g = 2;
-                } else {
-                    g = 1;
-                }
+        int idade = 1, cont = 0;
+        double media, altura, somaAlt = 0;
 
-            }
-        }
-        JOptionPane.showMessageDialog(null, "você pertence ao grupo de risco: "+g);
-                
+        while (idade > 0) {
+            idade = Integer.parseInt(JOptionPane.showInputDialog("Idade:"));
+            altura = Double.parseDouble(JOptionPane.showInputDialog("Altura:"));
+            if (idade >= 50) {
+                somaAlt = somaAlt + altura;
+                cont = (cont + 1);
+            } }
+        media = somaAlt / cont;
+        JOptionPane.showMessageDialog(null, "MÉDIA DA ALTURA DAS PESSOAS COM MAIS DE 50 ANOS: " + media);
+
     }
+
 }

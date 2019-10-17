@@ -1,30 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package questões.pkgdo.livro.fundamentos.da.programação.de.computador.cap;
+package cap05;
 
 import javax.swing.JOptionPane;
 
-public class Questao09 {
+public class questao09 {
 
     public static void main(String[] args) {
-        double saldoM, credito;
-        saldoM = Double.parseDouble(JOptionPane.showInputDialog("Informe o saldo médio"));
-        if (saldoM < 200) {
-            credito = saldoM * 0.1;
-        } else if (saldoM < 300) {
-            credito = saldoM * 0.2;
-        } else {
-            if (saldoM <= 400) {
-                credito = saldoM * 0.25;
-            } else {
-                credito = saldoM * 0.3;
+        double idade, peso, altura, somida = 0, media;
+        int c = 0, alt = 0, ida = 0;
+        while (c != 3) {            
+            idade = Double.parseDouble(JOptionPane.showInputDialog("Informe sua idade: "));
+            peso = Double.parseDouble(JOptionPane.showInputDialog("Informe seu peso: "));
+            altura = Double.parseDouble(JOptionPane.showInputDialog("Informe sua altura: "));
+            if (peso > 90 && altura < 1.50) {
+                alt++;
             }
+            somida += idade;
+            ida++;
+            c++;
         }
-        JOptionPane.showMessageDialog(null, "seu saldo médio é: " + saldoM + ". O seu créito é: " + credito);
-
+        media = somida/ida;
+        JOptionPane.showMessageDialog(null, "A media das idades é: "+media);
+        JOptionPane.showMessageDialog(null, "A quantidade de pessoas com peso superior a 90 kg e altura inferior a 1.50 são: "+alt+ " pessoas");
+        
     }
-
 }
